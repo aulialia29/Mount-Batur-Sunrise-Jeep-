@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Mount Batur Sunrise Jeep Tour</title>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="fas fa-phone"></i> +628170674790</span>
+      <span><i class="fas fa-envelope"></i> hello@sunrisejeepadventure.com</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="index.html" class="auth-link">Keluar</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h2>Mount Batur Sunrise Jeep</h2>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Beranda</a></li>
+        <li><a href="aboutlogin.html">Tentang Kami</a></li>
+        <li><a href="tourslogin.html">Travel Populer</a></li>
+        <li><a href="contactlogin.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <img src="TRAVEL.jpg" alt="Gunung Batur" class="hero-image">
+      <div class="hero-text">
+        <h2>Jelajahi Keindahan Gunung Batur dengan Jeep</h2>
+        <p>Pengalaman tak terlupakan menyaksikan matahari terbit dari puncak Gunung Batur tanpa perlu mendaki.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <h1>Mount Batur Sunrise Jeep Tour</h1>
+      <p>Mount Batur Sunrise Jeep Tour is the most popular activity in Kintamani tourist attraction today. After being determined by the Unesco Bureau global geopark, Mount Batur has become a mandatory destination for tourists visiting Bali. Besides offering the stunning view of Mount Batur and Lake Batur, there are several activities that can be done around Mount Batur such as Mount Batur Hiking, Black Lava Jeep Tour, Sunrise Jeep Tour, Sunset Black Lava Tour, Camping, and others.</p>
+
+      <h2>Highlight</h2>
+      <ul>
+        <li>Mount Batur Sunrise Jeep Tour</li>
+        <li>Mount Batur Sunrise Jeep Tour with Hot spring</li>
+        <li>Black Lava and Black Sand Jeep Tour with Segara Hulundanu Temple</li>
+      </ul>
+
+      <section class="tours">
+        <h2>Travel Populer</h2>
+        <div class="tour-cards">
+          <div class="tour-card">
+            <a href="tour1.html"><img src="Singapore.jpeg" alt="Tour 1"></a>
+            <div class="card-info">
+              <h3>Mount Batur Sunrise Jeep</h3>
+              <p><i class="far fa-clock"></i> 3 Jam</p>
+              <p><span class="price-strike">Rp600.000</span> <span class="price">Rp450.000</span></p>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <a href="tour2.html"><img src="china.jpeg" alt="Tour 2"></a>
+            <div class="card-info">
+              <span class="badge">Best Seller</span>
+              <h3>Mount Batur Sunrise Jeep Black Lava dan Black Sand</h3>
+              <p><i class="far fa-clock"></i> 4 Jam</p>
+              <p><span class="price-strike">Rp1.000.000</span> <span class="price">Rp600.000</span></p>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <a href="tour3.html"><img src="thailand.jpeg" alt="Tour 3"></a>
+            <div class="card-info">
+              <h3>Mount Batur Sunrise Jeep</h3>
+              <p><i class="far fa-clock"></i> 4 Jam</p>
+              <p><span class="price">Rp450.000</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Kontak Kami</h4>
+          <p><strong>📞</strong> +6281310933831</p>
+          <p><strong>📧</strong> agusanggaradipa@gmail.com</p>
+        </div>
+        <div class="footer-column">
+          <h4>Tentang Kami</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="tours.html">Popular Tour</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="payment-info">
+          <h4>Pembayaran ke:</h4>
+          <p><strong>BCA</strong><br>Renon Denpasar<br>0402918005<br>I Gede Totok Suryawan</p>
+          <p><strong>Mandiri</strong><br>9000034002007<br>I Gede Totok Suryawan</p>
+          <p><strong>BNI</strong><br>0896156981<br>I Gede Totok Suryawan</p>
+        </div>
+        <div class="footer-column contact-form">
+          <div class="form-and-payment">
+            <form action="https://formsubmit.co/hello@sunrisejeeptour.com" method="POST" onsubmit="return showSuccessMessage()">
+              <div class="form-row">
+                <input type="text" name="name" placeholder="Full Name*" required />
+                <input type="email" name="email" placeholder="Email*" required />
+              </div>
+              <input type="text" name="_subject" placeholder="Subject*" required />
+              <textarea name="message" placeholder="Message*" required></textarea>
+
+              <!-- Optional hidden fields -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://sunrisejeeptour.com/thanks.html">
+
+              <button type="submit">SUBMIT NOW</button>
+              <p id="success-msg" style="display:none; color: green; margin-top: 10px;">Pesan berhasil dikirim!</p>
+            </form>        
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-left"></div>
+        <div class="footer-center">
+          &copy; 2025 Mount Batur Sunrise Jeep All Rights Reserved.
+        </div>
+        <div class="footer-right">
+          Follow Us:
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    function showSuccessMessage() {
+      document.getElementById("success-msg").style.display = "block";
+      return true;
+    }
+  </script>
+
+</body>
+</html>

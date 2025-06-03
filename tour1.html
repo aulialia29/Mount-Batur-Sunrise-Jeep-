@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mount Batur Sunrise Jeep Tour</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .header1 {
+      display: flex;
+      justify-content: space-between;
+    }
+    .left {
+      flex: 3;
+    }
+    .right {
+      flex: 1;
+      padding-left: 30px;
+      border-left: 1px solid #ccc;
+    }
+    h1 {
+      color: #b44f00;
+    }
+    ul {
+      padding: 0;
+    }
+    ul li {
+      list-style: none;
+      margin-bottom: 8px;
+    }
+    .price-box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      background: #f9f9f9;
+      margin-bottom: 20px;
+    }
+    .price-box h3 {
+      margin: 0 0 10px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    .info-section {
+      background: #fff7f0;
+      padding: 15px;
+      margin-top: 20px;
+      border: 1px solid #eee;
+    }
+    .contact-box {
+      background: #ff6f30;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .contact-box a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .section h3 {
+      margin-bottom: 10px;
+    }
+    .photo-slider {
+      text-align: center;
+    }
+    .photo-slider img {
+      max-width: 100%;
+      height: auto;
+    }
+    .itinerary-box {
+      background: #f4f4f4;
+      padding: 10px;
+      margin-bottom: 8px;
+    }
+    .itinerary-time {
+      font-weight: bold;
+      color: #b44f00;
+    }
+    /* Topbar styles */
+    .topbar {
+      background: #333;
+      color: white;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+    .topbar-left span {
+      margin-right: 15px;
+    }
+    .topbar-right a {
+      color: white;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+    header {
+      background: #b44f00;
+      color: white;
+      padding: 15px 20px;
+    }
+    header h2 {
+      margin: 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      margin-top: 8px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Footer */
+    .site-footer {
+      background: #222;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .footer-column {
+      flex: 1 1 200px;
+    }
+    .footer-column h4 {
+      border-bottom: 1px solid #555;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+    .payment-info p {
+      margin: 5px 0;
+      line-height: 1.3;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 20px;
+      border-top: 1px solid #555;
+      padding-top: 10px;
+    }
+    .footer-right i {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .faq-item p {
+      margin: 0;
+      padding: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="fas fa-phone"></i> +6281310933831</span>
+      <span><i class="fas fa-envelope"></i> agusanggaradipa@gmail.com</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="index.html" class="auth-link">Keluar</a>
+
+      <!-- Shown only when logged in -->
+      <div id="user-menu" class="user-dropdown" style="display: none; position: relative;">
+        <span id="username-display" style="cursor: pointer;">Username</span>
+        <div class="dropdown-content" style="display: none; position: absolute; background: white; border: 1px solid #ccc; padding: 10px;">
+          <a href="index.html" onclick="logout()">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <header>
+    <h2>Mount Batur Sunrise Jeep</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+        <li><a href="tours.html">Travel Populer</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="TRAVEL.jpg" alt="Gunung Batur" class="hero-image" style="width:100%; height:auto;" />
+      <div class="hero-text" style="padding: 20px;">
+        <h2>Welcome to Mount Batur Sunrise Jeep</h2>
+        <p>Pengalaman tak terlupakan menyaksikan matahari terbit dari puncak Gunung Batur tanpa perlu mendaki.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="header1">
+        <div class="left">
+          <h1>Mount Batur Sunrise Jeep</h1>
+          <p><strong>Duration:</strong> 3 Hours</p>
+          <p><strong>Max People:</strong> 3 person</p>
+          <p><strong>Valid Price:</strong> January 2025 - May 2025</p>
+          <p><strong>Pickup:</strong> Mount Batur Area</p>
+
+          <p>This trip package to find Sunrise in Mount Batur using a 4WD Jeep is an option for those who have short time...</p>
+
+          <h3>Departure & Return Location</h3>
+          <p>Toya Bungkah Parking (Google Maps)</p>
+
+          <h3>Departure Time</h3>
+          <p>03.50 AM</p>
+
+          <h3>Price Includes</h3>
+          <ul>
+            <li>4WD Jeep car rental</li>
+            <li>Driver</li>
+          </ul>
+
+          <h3>Price Excludes</h3>
+          <ul>
+            <li>Breakfast</li>
+            <li>Pick up hotel outside Mount Batur area</li>
+          </ul>
+
+          <h3>What to Use</h3>
+          <ul>
+            <li>Trekking Pants</li>
+            <li>Jacket</li>
+            <li>Shoes</li>
+          </ul>
+
+          <h3>Must Bring</h3>
+          <ul>
+            <li>Smartphone</li>
+            <li>Camera</li>
+            <li>Extra Money</li>
+          </ul>
+
+          <div class="section">
+            <h3>Photos</h3>
+            <div class="photo-slider">
+              <img src="Singapore.jpeg" alt="Sunrise Photo" />
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Itinerary</h3>
+            <div class="itinerary-box"><span class="itinerary-time">03.50 AM</span> - Depart from the Meeting Point (Toya Bungkah Parking)</div>
+            <div class="itinerary-box"><span class="itinerary-time">04.45 AM</span> - Arriving at Sunrise Point Mount Batur</div>
+            <div class="itinerary-box"><span class="itinerary-time">06.00 AM</span> - Time to enjoy the sunrise and breakfast</div>
+            <div class="itinerary-box"><span class="itinerary-time">07.00 AM</span> - Drive down the Batur Caldera</div>
+            <div class="itinerary-box"><span class="itinerary-time">08.00 AM</span> - Arriving again at Meeting Point, Tour End</div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="price-box">
+            <h3>Price</h3>
+            <p><del>Rp. 350.000</del> <strong>Rp. 200.000</strong></p>
+            <label for="date">Date:</label>
+            <input type="date" id="date" />
+            <label for="people">Number of People:</label>
+            <select id="people">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <button>Proceed Booking</button>
+          </div>
+
+          <div class="info-section">
+            <p>&#10003; Affordable Prices and Free Cancellation</p>
+            <p>&#10003; Experienced Local Team</p>
+            <p>&#10003; Your safety and comfort is our priority</p>
+            <p>&#10003; We’re available 24/7</p>
+          </div>
+
+          <div class="contact-box">
+            <p>Any Questions?</p>
+            <p>We are ready to assist you anytime via email or WhatsApp</p>
+            <p><a href="mailto:agusanggaradipa@gmail.com">agusanggaradipa@gmail.com</a></p>
+            <p><strong>+6281310933831</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Google Map Section -->
+      <div class="section">
+        <h3>Map</h3>
+        <iframe
+          src="https://maps.app.goo.gl/1LYGPgarRZHJ4AGP6"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="section">
+        <h3>Frequently Asked Questions</h3>
+
+        <div class="faq-item">
+          <p onclick="toggleAnswer(this)" style="cursor: pointer; font-weight: bold; color: #b44f00;">
+            Do I need to book in advance?
+          </p>
+          <p class="faq-answer" style="display: none; margin-left: 15px;">
+            Yes, we recommend booking at least 1 day in advance to ensure availability.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <p onclick="toggleAnswer(this)" style="cursor: pointer; font-weight: bold; color: #b44f00;">
+            Is it safe for children?
+          </p>
+          <p class="faq-answer" style="display: none; margin-left: 15px;">
+            Yes, the jeep tour is safe for children, but we recommend age 5 and above.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <p onclick="toggleAnswer(this)" style="cursor: pointer; font-weight: bold; color: #b44f00;">
+            Can I cancel the trip?
+          </p>
+          <p class="faq-answer" style="display: none; margin-left: 15px;">
+            Yes, free cancellation is available up to 24 hours before the tour.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <p onclick="toggleAnswer(this)" style="cursor: pointer; font-weight: bold; color: #b44f00;">
+            Do I need to bring my own breakfast?
+          </p>
+          <p class="faq-answer" style="display: none; margin-left: 15px;">
+            Yes, breakfast is not included in the package.
+          </p>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4>Kontak Kami</h4>
+            <p><strong>📞</strong> +6281310933831</p>
+            <p><strong>📧</strong> agusanggaradipa@gmail.com</p>
+          </div>
+          <div class="footer-column">
+            <h4>Tentang Kami</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="tours.html">Popular Tour</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="payment-info">
+            <h4>Pembayaran ke:</h4>
+            <p>
+              <strong>BCA</strong><br />
+              Renon Denpasar<br />
+              0402918005<br />
+              I Gede Totok Suryawan
+            </p>
+            <p>
+              <strong>Mandiri</strong><br />
+              
+              <div class="footer-column contact-form">
+                <form action="https://formsubmit.co/agusanggaradipa@gmail.com" method="POST" onsubmit="return showSuccessMessage()">
+                  <div class="form-row">
+                    <input type="text" name="name" placeholder="Full Name*" required />
+                    <input type="email" name="email" placeholder="Email*" required />
+                  </div>
+                  <input type="text" name="_subject" placeholder="Subject*" required />
+                  <textarea name="message" placeholder="Message*" required></textarea>
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="https://sunrisejeeptour.com/thanks.html" />
+                  <button type="submit">SUBMIT NOW</button>
+                  <p id="success-msg" style="display:none; color: green; margin-top: 10px;">Pesan berhasil dikirim!</p>
+                </form>
+              </div>
+            </div>
+      
+            <div class="footer-bottom">
+              <div class="footer-center">
+                &copy; 2025 Mount Batur Sunrise Jeep. All Rights Reserved.
+              </div>
+              <div class="footer-right">
+                Follow Us:
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <a href="https://wa.me/6281310933831" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </footer>
+        </main>
+      
+        <script>
+          function showSuccessMessage() {
+            document.getElementById("success-msg").style.display = "block";
+            return true;
+          }
+        </script>
+      
+      </body>
+      </html>
+      
